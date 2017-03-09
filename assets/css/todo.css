@@ -1,0 +1,98 @@
+body {
+	font-family: Roboto;
+  background: -webkit-linear-gradient(90deg, #2BC0E4 10%, #EAECC6 90%); /* Chrome 10+, Saf5.1+ */
+  background:    -moz-linear-gradient(90deg, #2BC0E4 10%, #EAECC6 90%); /* FF3.6+ */
+  background:     -ms-linear-gradient(90deg, #2BC0E4 10%, #EAECC6 90%); /* IE10 */
+  background:      -o-linear-gradient(90deg, #2BC0E4 10%, #EAECC6 90%); /* Opera 11.10+ */
+  background:         linear-gradient(90deg, #2BC0E4 10%, #EAECC6 90%); /* W3C */
+}
+#container {
+	width: 520px;
+	/*height: auto;*/
+	margin: 40px auto;
+	background: #f7f7f7;
+	box-shadow: 0 0 3px rgba(0,0,0, 0.1);
+}
+h1 {
+	background: #2980b9;
+	color: white;
+	margin: 0;
+	padding: 10px 20px;
+	text-transform: uppercase;
+	font-size: 24px;
+	font-weight: normal;
+}
+.fa-plus {
+	float: right;
+}
+input {
+	font-size: 18px;
+	color: #2980b9;
+	background-color: #f7f7f7;
+	width: 100%;
+	padding: 13px 13px 13px 20px;
+	box-sizing: border-box;
+	border: 3px solid rgba(0,0,0,0);
+}
+
+input:focus{
+	background: #fff;
+	border: 3px solid #2980b9;
+	outline: none;
+}
+
+.completed {
+	color: gray;
+	text-decoration: line-through;
+}
+
+ul {
+	width: 520px;
+	height: 120px;
+	list-style: none;
+	position: absolute;
+	padding-left: 0;
+}
+
+li {
+	background: #fff;
+	height: 120px;
+	width: 120px;
+	/*line-height: 40px;*/
+	color: #666;
+	border-radius: 50%;
+	text-align: center;
+	display: in;
+	float: left;
+	margin: 0 auto;
+	margin:5px;
+	margin-bottom: 10px;
+	position: relative;
+
+}
+li i{
+	height: 20px;
+	width: 20px;
+	background-color:red ;
+	border-radius: 50%;
+	text-align: center;
+	color: white;
+	float: left;
+	position: absolute;
+  /*visibility: hidden;*/
+	left: 90px;
+	padding: 3px;
+	transition: 0.2s linear;
+	opacity: 0;
+}
+li span{
+	padding: 10px;
+	position: absolute;
+	left:auto;
+	top: 38px;
+}
+
+li:hover  i{
+	visibility: visible;
+	opacity: 1.0;
+}
