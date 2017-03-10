@@ -6,8 +6,11 @@ $("ul").on("click", "span", function(){
 
 //Click on X to delete Todo
 $("ul").on("click", "i", function(event){
-	$(this).parent().fadeOut(500,function(){
+	$(this).parent().fadeOut(250,function(){
 		$(this).remove();
+		});
+	$("li").fadeOut(250,function(){
+		$("li").fadeIn(100);
 	});
 	event.stopPropagation();
 });
@@ -22,6 +25,6 @@ $("input[type='text']").keypress(function(event){
 	}
 });
 
-$(".fa-plus").click(function(){
-	$("input[type='text'").fadeToggle()
+$(".fa-plus").on("click",function(){
+	$("input").slideToggle(500);
 });

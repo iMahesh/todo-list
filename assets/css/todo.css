@@ -33,6 +33,7 @@ input {
 	padding: 13px 13px 13px 20px;
 	box-sizing: border-box;
 	border: 3px solid rgba(0,0,0,0);
+	display: none;
 }
 
 input:focus{
@@ -90,6 +91,7 @@ li span{
 	position: absolute;
 	left:auto;
 	top: 38px;
+	font-size: 22px;
 }
 
 li:hover  i{
