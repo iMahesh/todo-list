@@ -1,7 +1,8 @@
 
-// Check Off Specific Todos By Clicking
+// Check Off Specific Todos By Clicking on the text
 $("ul").on("click", "span", function(){
 	$(this).toggleClass("completed");
+	$(this).siblings(".fa-check").toggleClass("marked");
 });
 
 //Click on X to delete Todo
@@ -16,13 +17,10 @@ $("ul").on("click", (".fa-times"), function(event){
 	event.stopPropagation();
 });
 
+//click on fa-check to mark it as completed
 $("ul").on("click", (".fa-check"), function(event){
-	$(this).toggleClass("marked",function(){
-		$(".fa-check").fadeOut(100,function(){
-			$("fa-check").fadeIn(100);
-		});
-	});
-
+	$(this).toggleClass("marked");
+	$(this).siblings("span").toggleClass("completed");
 	event.stopPropagation();
 });
 
