@@ -5,13 +5,24 @@ $("ul").on("click", "span", function(){
 });
 
 //Click on X to delete Todo
-$("ul").on("click", "i", function(event){
+$("ul").on("click", (".fa-times"), function(event){
 	$(this).parent().fadeOut(250,function(){
-		$(this).remove();
+		console.log($(this));
+		 $(this).remove();
 		});
 	$("li").fadeOut(250,function(){
 		$("li").fadeIn(100);
 	});
+	event.stopPropagation();
+});
+
+$("ul").on("click", (".fa-check"), function(event){
+	$(this).toggleClass("marked",function(){
+		$(".fa-check").fadeOut(100,function(){
+			$("fa-check").fadeIn(100);
+		});
+	});
+
 	event.stopPropagation();
 });
 
@@ -21,7 +32,7 @@ $("input[type='text']").keypress(function(event){
 		var todoText = $(this).val();
 		$(this).val("");
 		//create a new li and add to ul
-		$("ul").append("<li> <span>" + todoText + "</span><i class='fa fa-times'></i></li>")
+		$("ul").append("<li> <span>" + todoText + "</span><i class='fa fa-times'></i><i class='fa fa-check'></i></li>")
 	}
 });
 
