@@ -89,9 +89,10 @@ li i{
 li span{
 	padding: 10px;
 	position: absolute;
-	left:auto;
-	top: 38px;
-	font-size: 22px;
+	font-size: 18px;
+	top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 li:hover  i{
